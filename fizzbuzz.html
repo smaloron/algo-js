@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzbuzz</title>
+    <script>
+        const n = prompt("Un nombre");
+
+        // Un première solution
+        if (n % 15 == 0) {
+            alert("fizzbuzz");
+        } else if (n % 5 == 0) {
+            alert("buzz");
+        } else if (n % 3 == 0) {
+            alert("fizz");
+        } else {
+            alert(n);
+        }
+
+        // Une autre possibilité
+        let output = "";
+
+        if (n % 3 == 0) output += "fizz";
+        if (n % 5 == 0) output += "buzz";
+        if (output == "") output = n;
+
+        alert(output);
+
+        // une dernière possibilité
+        output = n % 15 == 0 ? "fizzbuzz" : n % 3 == 0 ? "fizz" : n % 5 == 0 ? "buzz" : n;
+        alert(n);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

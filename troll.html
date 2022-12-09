@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troll</title>
+
+    <script>
+        const startMessage = `
+        Vous rencontrez un troll
+        que faites-vous ?
+            1 : fuir 2: combattre 3: se cacher`;
+
+        const action = parseInt(prompt(startMessage));
+        let question, answerTrue, answerFalse;
+
+        switch (action) {
+            case 1:
+                question = "Etes-vous rapide";
+                answerTrue = "Vous-vous sauvez";
+                answerFalse = "Le troll vous mange";
+                break;
+            case 2:
+                question = "Etes-vous fort";
+                answerTrue = "Vous massacrez le troll";
+                answerFalse = "Le troll vous mange";
+                break;
+            case 3:
+                question = "Etes-vous furtif";
+                answerTrue = "Vous-vous cachez";
+                answerFalse = "Le troll vous mange";
+                break;
+
+            default:
+                alert("Vous devez choisir entre 1, 2 et 3");
+        }
+
+        if (question) {
+
+            if (confirm(question)) {
+                alert(answerTrue);
+            } else {
+                alert(answerFalse);
+            }
+
+            // Version courte
+            //alert(confirm(question) ? answerTrue : answerFalse);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

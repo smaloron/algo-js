@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisextile</title>
+    <script>
+        year = prompt("Année");
+
+        isLeapYear = year % 4 == 0 && year % 100 > 0;
+        isLeapYear = isLeapYear || year % 400 == 0;
+
+        if (!year) {
+            console.error("Veuillez entrer l'année");
+        } else if (isLeapYear) {
+            console.log("Bisextile")
+        } else {
+            console.log("non bisextile")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

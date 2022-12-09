@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devine nombre</title>
+
+    <script>
+        // le nombre à deviner
+        const secretNumber = Math.ceil(Math.random() * 100);
+        // le nombre de tentatives
+        let tries = 0;
+        // la saisie du joueur
+        let guess;
+        // le message du système
+        let message = "";
+
+        do {
+            // on demande la saisie
+            guess = parseInt(prompt(message + "\nUn nombre entier entre 1 et 100"));
+
+            // Si la saisie est valide
+            if (guess) {
+
+                // incrémente le nombre de tentatives
+                tries++;
+
+                // tests pour savoir si on a gagné
+                if (guess == secretNumber) {
+                    message = `Bravo vous avez gagné en ${tries} coup(s)`;
+                } else if (guess < secretNumber) {
+                    message = "trop petit";
+                } else {
+                    message = "trop grand";
+                }
+            }
+        } while (guess != secretNumber)
+
+        alert(message);
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
