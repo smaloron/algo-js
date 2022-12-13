@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo box années</title>
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <script>
+        function getOneOption (year) {
+            return `<option>${year}</option>`;
+        }
+
+        function comboYears (
+            startYear = 2022, numberOfYears = 5) {
+            let html = "<select>";
+            for (let i = 0; i < numberOfYears; i++) {
+                html += getOneOption(startYear + i);
+            }
+            html += "</select>";
+            return html;
+        }
+
+        const output = document.getElementById("output");
+
+        const now = new Date();
+        output.innerHTML = comboYears(now.getFullYear(), 15);
+    </script>
+</body>
+
+</html>
