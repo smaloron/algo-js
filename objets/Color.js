@@ -53,7 +53,7 @@ class Rainbow {
     }
 
     #getStripe (color) {
-        return `<div style="background-color:"#${color.getHex()}">&nbsp;</div>`;
+        return `<div style="background-color:#${color.getHex()}">&nbsp;</div>`;
     }
 
     show () {
@@ -61,7 +61,7 @@ class Rainbow {
     }
 
     showAlt () {
-        html = "";
+        let html = "";
         for (let c of this.#colorList) {
             html += this.#getStripe(c);
         }
