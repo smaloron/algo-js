@@ -53,7 +53,7 @@ class Rainbow {
     }
 
     #getStripe (color) {
-        return `<div style="background-color:"#${color.getHex()}"></div>`;
+        return `<div style="background-color:"#${color.getHex()}">&nbsp;</div>`;
     }
 
     show () {
