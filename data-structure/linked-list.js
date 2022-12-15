@@ -61,6 +61,35 @@ class LinkedList {
         this.size--;
         return removedHead;
     }
+
+    /**
+     * Supprime en queue de liste
+     * @returns 
+     */
+    shift () {
+        // si la liste est vide on retourne null
+        if (this.tail == null) return null;
+
+        let removedTail = this.tail;
+
+        if (this.size === 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.tail = this.tail.next;
+        }
+
+        this.size--;
+        return removedTail;
+    }
+
+    unshift (value) {
+        const newItem = new Node(value);
+        newItem.next = this.tail;
+        this.tail = newItem;
+        if (this.size === 0) this.head = newItem;
+        this.size++;
+    }
 }
 
 
