@@ -31,13 +31,13 @@ function enhancedBubbleSort (source) {
     return this;
 }
 
-/*
+
 const t = new Array(10000)
     .fill(0)
     .map(() => Math.ceil(Math.random() * 100));
-    */
 
-const t = [1, 2, 3, 6, 5, 8, 7, 9, 10, 11, 12, 13, 14, 15];
+
+// const t = [1, 2, 3, 6, 5, 8, 7, 9, 10, 11, 12, 13, 14, 15];
 
 const t2 = t.map(item => item);
 
